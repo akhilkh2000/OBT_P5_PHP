@@ -1,0 +1,13 @@
+{
+    "name": "admin/obt_p5_php",
+    "description": "final dev P5",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "obt-development",
+            "email": "olivier.boutet@obt-development.eu"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
