@@ -8,6 +8,11 @@
             "email": "olivier.boutet@obt-development.eu"
         }
     ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "src"
+    }
+  },
     "minimum-stability": "dev",
     "require": {}
 }
