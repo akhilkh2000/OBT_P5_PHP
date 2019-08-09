@@ -13,21 +13,17 @@ $fileLocator = new FileLocator([__DIR__.'/../']);
 $loader= new YamlFileLoader($fileLocator);
 $routes=$loader->load('config/app/routes.yaml');
 
-dump($routes);
-//$routes = new RouteCollection();
-//$routes->add('homepage', $routeHome);
-//$routes->add('details_resume', $routeResume);
-
 $request = Request::createFromGlobals();
 $context = new RequestContext();
 $context->fromRequest($request);
 
 $matcher = new UrlMatcher($routes,$context);
 
-
 try{
     $params = $matcher->match($context->getPathInfo());
-    dump($params);
+    $controllerName = explode('::', $params['_controller']);
+//    $controller = "App\\Controllers\\"
+    dump($controllerName);
 }catch (ResourceNotFoundException $e) {
     echo 'La page n\'existe pas';
 };
