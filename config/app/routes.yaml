@@ -1,0 +1,11 @@
+homepage:
+  path: /
+  controller: DefaultController::homeAction
+  methods: [GET,POST]
+
+resume:
+  path: /resume/{id}
+  controller: DefaultController::resumeAction
+  methods: [GET,POST]
+  requirements:
+    id: '\d+'

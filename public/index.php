@@ -1,41 +1,33 @@
 <?php
 
+use Symfony\Component\Config\FileLocator;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
+use Symfony\Component\Routing\Loader\YamlFileLoader;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\Routing\RequestContext;
-use Symfony\Component\Routing\Route;
-use Symfony\Component\Routing\RouteCollection;
 
 require "../vendor/autoload.php";
 
-$routeHome = new Route(
-    '/home',
-    [
-        '_controller'=>'homeController',
-    ]
+$fileLocator = new FileLocator([__DIR__.'/../']);
+$loader= new YamlFileLoader($fileLocator);
+$routes=$loader->load('config/app/routes.yaml');
 
-);
+dump($routes);
+//$routes = new RouteCollection();
+//$routes->add('homepage', $routeHome);
+//$routes->add('details_resume', $routeResume);
 
-$routes = new RouteCollection();
-$routes->add('homepage', $routeHome);
-
-$context = new RequestContext(
-    '/',
-    $_SERVER['REQUEST_METHOD'],
-    $_SERVER['SERVER_NAME'],
-    'http',
-    80,
-    443,
-    $_SERVER['REQUEST_URI']
-);
-
+$request = Request::createFromGlobals();
+$context = new RequestContext();
+$context->fromRequest($request);
 
 $matcher = new UrlMatcher($routes,$context);
 
 
 try{
     $params = $matcher->match($context->getPathInfo());
-    var_dump($params);
+    dump($params);
 }catch (ResourceNotFoundException $e) {
     echo 'La page n\'existe pas';
 };
