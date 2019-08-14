@@ -4,11 +4,11 @@
 namespace APP\controllers;
 
 
-class ResumeController
+class ResumeController extends AbstractController
 {
-    public function resumeAction($id)
+    public function resumeAction()
     {
-        echo 'Page Resume';
+        return $this->render('core/resume.html.twig');
     }
 
 }

@@ -4,10 +4,11 @@
 namespace APP\controllers;
 
 
-class DefaultController
+class DefaultController extends AbstractController
 {
     public function homeAction()
     {
-        echo 'Page acceuil';
+        return $this->render('core/home.html.twig');
     }
+
 }
