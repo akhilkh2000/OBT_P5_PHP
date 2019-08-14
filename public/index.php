@@ -6,24 +6,35 @@ use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\Loader\YamlFileLoader;
 use Symfony\Component\Routing\Matcher\UrlMatcher;
 use Symfony\Component\Routing\RequestContext;
+use Symfony\Component\Routing\Router;
 
 require "../vendor/autoload.php";
 
 $fileLocator = new FileLocator([__DIR__.'/../']);
-$loader= new YamlFileLoader($fileLocator);
-$routes=$loader->load('config/app/routes.yaml');
+
 
 $request = Request::createFromGlobals();
 $context = new RequestContext();
 $context->fromRequest($request);
+$router = New Router(
+    new YamlFileLoader($fileLocator),
+    'config/app/routes.yaml',
+    [],
+    $context
+);
 
-$matcher = new UrlMatcher($routes,$context);
+$parameters = $router->match($request->getPathInfo());
 
 try{
-    $params = $matcher->match($context->getPathInfo());
-    $controllerName = explode('::', $params['_controller']);
-//    $controller = "App\\Controllers\\"
-    dump($controllerName);
+    $controllerName = explode('::', $parameters['_controller']);
+    $controller = "App\\Controllers\\".$controllerName[0];
+    $method =$controllerName[1];
+    $controller = new $controller();
+
+    unset($parameters['_route']);
+    unset($parameters['_controller']);
+    dump($parameters);
+    echo call_user_func_array([$controller, $method], $parameters);
 }catch (ResourceNotFoundException $e) {
     echo 'La page n\'existe pas';
 };

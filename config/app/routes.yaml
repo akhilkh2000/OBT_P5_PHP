@@ -5,7 +5,7 @@ homepage:
 
 resume:
   path: /resume/{id}
-  controller: DefaultController::resumeAction
+  controller: ResumeController::resumeAction
   methods: [GET,POST]
   requirements:
     id: '\d+'
