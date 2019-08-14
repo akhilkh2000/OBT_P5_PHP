@@ -1,0 +1,21 @@
+body {
+  background:url(../../../../../../wamp/www/OLIVIER_BOUTET_P5/public/images/floor.jpg) no-repeat;
+	background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-attachment: fixed;
+	background-position: center;
+	height: 100vh;
+	font-family: 'Hind Siliguri', sans-serif;
+
+}
+#editeur, textarea {
+    width: 98%;
+    height: 300px;
+    border: 1px solid black;
+
+    overflow: auto;
+    background-color: white;
+}
