@@ -1,7 +1,8 @@
-<div>w3-include = "../../layout/layout.php"</div>
+{% extends 'core/layout.html.twig' %}
+{% block body %}
 <div class="g2">
     <div class="photo">
-        <img src="../public/images/profil.jpg" alt="Olivier Boutet">
+        <img src="/images/profil.jpg" alt="Olivier Boutet">
     </div>
     <div class="info">
         <h2>
@@ -19,10 +20,10 @@
     <div class="main-links sidebar">
         <ul>
             <li>
-                <a href="#resume">Voir Mon CV</a>
+                <a href="resume/">Voir Mon CV</a>
             </li>
             <li>
-                <a href="#portfolio">Mon Portfolio</a>
+                <a href="portfolio">Mon Portfolio</a>
             </li>
             <li>
                 <a href="#Blog">Blog</a>
@@ -64,49 +65,41 @@
         </div>
     </div>
 </div>
-</div>
-</section><!-- content -->
-</div>
-<!-- End About Tab Data -->
-<!-- Resume Tab Data -->
-<div id="resume">
-    <section class="clearfix">
-        <?php require "views/resume.html";?>
-    </section>
-</div>
-<!-- End Resume Tab Data -->
-<!-- Portfolio Tab Data -->
-<div id="portfolio">
-    <section class="clearfix">
-        <?php require "views/portfolio.html";?>
-    </section>
-</div>
-<!-- End Portfolio Data -->
-<!-- Blog Tab Data -->
-<div id="Blog">
-    <section class="clearfix">
-        <?php require "views/blog.php";?>
-    </section>
-</div>
-<!-- End Blog Data -->
-<!-- Contact Tab Data -->
-<div id="contact">
-    <section class="clearfix">
-        <?php require "views/contact.php";?>
+{% endblock %}
+{#</section><!-- content -->#}
+{#</div>#}
+{#<!-- End About Tab Data -->#}
+{#<!-- Resume Tab Data -->#}
+{#<div id="resume">#}
+{#    <section class="clearfix">#}
 
-    </section>
-</div>
+{#    </section>#}
+{#</div>#}
+{#<!-- End Resume Tab Data -->#}
+{#<!-- Portfolio Tab Data -->#}
+{#<div id="portfolio">#}
+{#    <section class="clearfix">#}
+{#        <?php require "views/portfolio.html";?>#}
+{#    </section>#}
+{#</div>#}
+{#<!-- End Portfolio Data -->#}
+{#<!-- Blog Tab Data -->#}
+{#<div id="Blog">#}
+{#    <section class="clearfix">#}
+{#        <?php require "views/blog.php";?>#}
+{#    </section>#}
+{#</div>#}
+{#<!-- End Blog Data -->#}
+{#<!-- Contact Tab Data -->#}
+{#<div id="contact">#}
+{#    <section class="clearfix">#}
 
-<!-- End Contact Data -->
-</div>
-</div>
-<!-- End Tab Container -->
-<footer>
-    <p>
-        Designed with lots of love Olivier Boutet :).
-    </p>
-</footer>
-</div><!-- #main -->
-</div><!-- #main-container -->
-</body>
-</html>
+
+{#    </section>#}
+{#</div>#}
+
+{#<!-- End Contact Data -->#}
+{#</div>#}
+{#</div>#}
+{#<!-- End Tab Container -->#}
+

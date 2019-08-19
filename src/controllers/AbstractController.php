@@ -1,7 +1,7 @@
 <?php
 
 
-namespace APP\controllers;
+namespace App\controllers;
 
 
 use App\controllers\traits\TwigTrait;

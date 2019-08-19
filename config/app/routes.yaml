@@ -4,7 +4,17 @@ homepage:
   methods: [GET,POST]
 
 resume:
-  path: /resume/{id}
+  path: /resume/
+  controller: DefaultController::resume
+  methods: [GET,POST]
+
+notFound:
+  path: /404/
+  controller: DefaultController::notFound
+  methods: [GET,POST]
+
+resumes:
+  path: /resumes/
   controller: ResumeController::resumeAction
   methods: [GET,POST]
   requirements:

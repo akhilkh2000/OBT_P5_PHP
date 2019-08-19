@@ -24,6 +24,6 @@ trait TwigTrait
             $loader
         );
         $twig->addExtension(new DebugExtension());
-        return $twig
+        return $twig;
     }
 }

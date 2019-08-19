@@ -1,5 +1,6 @@
 <?php
 
+use App\controllers\NotFoundController;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
@@ -23,9 +24,10 @@ $router = New Router(
     $context
 );
 
-$parameters = $router->match($request->getPathInfo());
+
 
 try{
+    $parameters = $router->match($request->getPathInfo());
     $controllerName = explode('::', $parameters['_controller']);
     $controller = "App\\Controllers\\".$controllerName[0];
     $method =$controllerName[1];
@@ -33,9 +35,12 @@ try{
 
     unset($parameters['_route']);
     unset($parameters['_controller']);
-    dump($parameters);
-    echo call_user_func_array([$controller, $method], $parameters);
+
+    echo (call_user_func_array([$controller, $method], $parameters));
+
+
 }catch (ResourceNotFoundException $e) {
-    echo 'La page n\'existe pas';
+    $method= new NotFoundController();
+   echo $method->notFound();
 };
 
