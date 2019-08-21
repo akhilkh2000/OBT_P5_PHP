@@ -56,13 +56,12 @@ h1.obt {
     text-align: center;
 	font-size: 4.2em;
     color: #fff;
-    margin: 0 auto;
-    font-family: 'Tangerine', cursive;
+    margin: : 0 auto;
     letter-spacing: 2px;
   	/*position:absolute;*/
 
     left: 25%;
-    width: 52%;
+   /*width: 52%;*/
 	font-weight: bold;
 	text-shadow: 1px 1px 11px rgba(12, 12, 12, 0.75);
 }
@@ -70,21 +69,21 @@ h1.obt {
 .content-obt {
 
     width: 80%;
-    background-color: rgba(0, 0, 0, 0.71);
+    background-color: rgba(0.03, 0.01, 0, 0.71);
     /*position:absolute;*/
     top:20%;
     left: 30%;
     margin: 0 auto;
 }
 .agileits-left, .section_class_agileits {
-    margin-bottom: 17px;
+    margin-bottom: 5px;
 
 }
 .agile_form input[type=text], .agile_form input[type=email],.agile_form input[type=date],.agile_form input[type=password], .section_class_agileits select{
     padding: 5px;
     margin: 5px;
     color: #5d5c5c;
-    font-size: .9em;
+    font-size: 1.3em;
     outline: none;
     border: none;
     background: #fff;
@@ -101,7 +100,7 @@ h1.obt {
     cursor: pointer;
 }
 .form_obt {
-    padding: 3em 2em;
+    padding: 2em 1em;
 }
 .submit-ob input[type=submit] {
     color: #fff;
@@ -129,10 +128,10 @@ h1.obt {
 /*-- //form --*/
 /*-- copyright --*/
 h2.copyright-agileits {
-    font-size: 1em;
+   /* font-size: 1em;*/
     color: #fff;
     letter-spacing: 2px;
-    padding: 1em;
+    /*padding: 1em;*/
     float: right;
     width: 90%;
     margin: 0 auto;
@@ -159,23 +158,27 @@ h2.copyright-agileits a:hover {
 /*--responsive--*/
 @media(max-width: 1440px){
 	h2.copyright-agileits {
-		width: 48%;
+		width: 100%;
 	}
 	.content-obt {
-		width: 43%;
+		width: 70%;
+
 	}
 	h1.obt {
-		width: 54%;
+		/*width: 100%;*/
 	}
 }
 @media(max-width: 1366px){
 	h1.obt {
-		width: 56%;
-		margin: 28px 0;
-		font-size: 4em;
+		/*width: 56%;
+		/*margin: 28px 0;*/
+		font-size: 2.8em;
+		position: center;
+
 	}
 	h2.copyright-agileits {
-		width: 50%;
+		width: 70%;
+
 	}
 }
 @media(max-width: 1280px){

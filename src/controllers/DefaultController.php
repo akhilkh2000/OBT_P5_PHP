@@ -21,4 +21,23 @@ class DefaultController extends AbstractController
         return $this->render('core/404.html.twig');
     }
 
+    public function portFolio()
+    {
+        return $this->render('core/portfolio.html.twig');
+    }
+
+    public function blog()
+    {
+        return $this->render('core/blog.html.twig');
+    }
+
+    public function contact()
+    {
+        return $this->render('core/contact.html.twig');
+    }
+
+    public function registration()
+    {
+        return $this->render('registration/registration.html.twig');
+    }
 }

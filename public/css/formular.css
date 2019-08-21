@@ -1,5 +1,5 @@
 body {
-  background:url(../../../../../../wamp/www/OLIVIER_BOUTET_P5/public/images/floor.jpg) no-repeat;
+  background:url(/images/floor.jpg) no-repeat;
 	background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -8,11 +8,20 @@ body {
     background-attachment: fixed;
 	background-position: center;
 	height: 100vh;
-	font-family: 'Hind Siliguri', sans-serif;
+	/*font-family: 'Hind Siliguri', sans-serif;*/
 
 }
+h2.copyright-agileits
+{
+    font-size: 0.76em;
+
+}
+copyright-agileits
+{
+    size: 0.76em;
+}
 #editeur, textarea {
-    width: 98%;
+    width: 50%;
     height: 300px;
     border: 1px solid black;
 

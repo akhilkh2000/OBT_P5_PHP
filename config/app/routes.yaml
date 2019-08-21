@@ -13,6 +13,26 @@ notFound:
   controller: DefaultController::notFound
   methods: [GET,POST]
 
+blog:
+  path: /blog/
+  controller: DefaultController::blog
+  methods: [GET,POST]
+
+portfolio:
+  path: /portfolio/
+  controller: DefaultController::portFolio
+  methods: [GET,POST]
+
+contact:
+  path: /contact/
+  controller: DefaultController::contact
+  methods: [GET,POST]
+
+registration:
+  path: /registration/
+  controller: DefaultController::registration
+  methods: [GET,POST]
+
 resumes:
   path: /resumes/
   controller: ResumeController::resumeAction

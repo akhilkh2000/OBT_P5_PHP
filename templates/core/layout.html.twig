@@ -10,7 +10,7 @@
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/normalize.min.css">
-    <link rel="stylesheet" href="/css/normalize.css">
+{#    <link rel="stylesheet" href="/css/normalize.css">#}
     <link rel="stylesheet" href="/css/main.css">
     <link rel='stylesheet' href='/css/formular.css'>
     <link rel='stylesheet' href='/css/jquery-ui.css'>
@@ -24,10 +24,10 @@
     <title>Olivier Boutet - Développeur</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="apple-touch-icon-precomposed" href="/public/images/apple-touch-icon-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="/public/images/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="/public/images/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="/public/images/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-144x144-precomposed.png">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
     <link rel="stylesheet" href="/css/normalize.min.css">
@@ -62,16 +62,16 @@
                     <a href="/"><i class="icon-user"></i><span> A propos</span></a>
                 </li>
                 <li class='tab'>
-                    <a href="resume/"><i class="icon-file-text"></i><span> Curriculum</span></a>
+                    <a href="/resume/"><i class="icon-file-text"></i><span> Curriculum</span></a>
                 </li>
                 <li class='tab'>
-                    <a href="portefolio/"><i class="icon-heart"></i><span> Portfolio</span></a>
+                    <a href="/portfolio/"><i class="icon-heart"></i><span> Portfolio</span></a>
                 </li>
                 <li class='tab'>
-                    <a href="Blog/"><i class="icon-envelope"></i><span> Blog</span></a>
+                    <a href="/blog/"><i class="icon-envelope"></i><span> Blog</span></a>
                 </li>
                 <li class='tab'>
-                    <a href="contact/"><i class="icon-envelope"></i><span> Contact</span></a>
+                    <a href="/contact/"><i class="icon-envelope"></i><span> Contact</span></a>
                 </li>
             </ul>
             <!-- End Tab List -->
@@ -79,10 +79,13 @@
                 <!-- About Tab Data -->
                 <div id="about">
 {% block body %}{% endblock body %}
+
+            </div>
 {% block footer %}
+
                     <footer>
                         <p>
-                            Designed with lots of love Olivier Boutet :).
+                            Designed with lots of love by Olivier Boutet :).
                         </p>
                     </footer>
                     </div><!-- #main -->
