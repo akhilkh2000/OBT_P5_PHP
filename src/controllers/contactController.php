@@ -4,7 +4,7 @@
 namespace App\controllers;
 
 
-class contactController
+class contactController extends AbstractController
 {
 public function contact()
     {

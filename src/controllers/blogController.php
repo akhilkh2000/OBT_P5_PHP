@@ -4,7 +4,7 @@
 namespace App\controllers;
 
 
-class blogController
+class blogController extends AbstractController
 {
     public function blog()
     {

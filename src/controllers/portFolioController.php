@@ -4,7 +4,7 @@
 namespace App\controllers;
 
 
-class portFolioController
+class portFolioController extends AbstractController
 {
     public function portFolio()
     {

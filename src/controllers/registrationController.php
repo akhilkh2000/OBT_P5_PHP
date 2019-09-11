@@ -4,11 +4,11 @@
 namespace App\controllers;
 
 
-class registrationController
+class registrationController extends AbstractController
 {
 
     public function registration()
     {
-        return $this->registration('registration/registration.html.twig');
+        return $this->registration('registrationFolder/registration.html.twig');
     }
 }

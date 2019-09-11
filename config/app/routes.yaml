@@ -39,3 +39,8 @@ resumes:
   methods: [GET,POST]
   requirements:
     id: '\d+'
+
+connection:
+  path: /connection/
+  controller: DefaultController::connection
+  methods: [GET,POST]
