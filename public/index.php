@@ -4,8 +4,6 @@ use App\application\RouterApplication;
 use App\controllers\NotFoundController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
-use Symfony\Component\HttpFoundation\Response;
-
 
 require "../vendor/autoload.php";
 
@@ -16,12 +14,11 @@ $router->initRouter();
 
 try{
         $response = $router->run ();
-
-//        $response = new Response($response);
         $response->send();
-    } catch (ResourceNotFoundException $e) {dump ($e);
+    } catch (ResourceNotFoundException $e)
+    {
         $controller= new NotFoundController();
         $response = $controller->notFound ();
         $response->send();
-}
+    }
 

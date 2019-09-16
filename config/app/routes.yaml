@@ -3,44 +3,33 @@ homepage:
   controller: DefaultController::homeAction
   methods: [GET,POST]
 
-resume:
-  path: /resume/
-  controller: DefaultController::resume
-  methods: [GET,POST]
-
 notFound:
   path: /404/
-  controller: DefaultController::notFound
+  controller: NotFoundController::notFound
   methods: [GET,POST]
 
 blog:
   path: /blog/
-  controller: DefaultController::blog
+  controller: BlogController::blog
   methods: [GET,POST]
 
 portfolio:
   path: /portfolio/
-  controller: DefaultController::portFolio
+  controller: PortFolioController::portFolio
   methods: [GET,POST]
 
 contact:
   path: /contact/
-  controller: DefaultController::contact
+  controller: ContactController::contact
   methods: [GET,POST]
 
 registration:
   path: /registration/
-  controller: DefaultController::registration
+  controller: RegistController::registAction
   methods: [GET,POST]
 
-resumes:
-  path: /resumes/
+resume:
+  path: /resume/
   controller: ResumeController::resumeAction
   methods: [GET,POST]
   requirements:
-    id: '\d+'
-
-connection:
-  path: /connection/
-  controller: DefaultController::connection
-  methods: [GET,POST]

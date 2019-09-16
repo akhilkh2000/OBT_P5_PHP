@@ -27,14 +27,12 @@ img{max-width:100%;}
 
 
 body {
-	background:url(../images/floor.jpg) no-repeat;
 	background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
-    background-attachment: fixed;
-	background-position: center;
+	background: url(../images/floor.jpg) no-repeat fixed center;
 	height: 100vh;
 	font-family: 'Hind Siliguri', sans-serif;
 }

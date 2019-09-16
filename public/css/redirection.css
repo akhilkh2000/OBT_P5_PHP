@@ -1,0 +1,84 @@
+body {
+    background:url(../images/floor.jpg) no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+@media(max-width: 1440px){}
+@media(max-width: 1080px){}
+@media(max-width: 1050px){}
+@media(max-width: 1024px){}
+@media(max-width: 991px){}
+@media(max-width: 900px){}
+@media(max-width: 800px){}
+@media(max-width: 768px){}
+@media(max-width: 736px){}
+@media(max-width: 667px){}
+@media(max-width: 640px){}
+@media(max-width: 600px){}
+@media(max-width: 568px){}
+@media(max-width: 480px){}
+@media(max-width: 414px){}
+@media(max-width: 384px){}
+@media(max-width: 375px){}
+@media(max-width: 320px){}
+
+.redirection .redirection-registration h1 {
+    font-family: 'Montserrat', sans-serif;
+    position: center;
+    left: 15%;
+    top: 15%;
+    font-size: 2.3em;
+    font-weight: 200;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #808080;
+    text-shadow: -1px -1px 0px #8400ff;
+    letter-spacing: 10px;
+}
+.redirection .redirection-registration h2 {
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 130px;
+    font-size: 1.8em;
+    font-weight: 200;
+    color: #808080;
+    text-shadow:  1px 1px 0px #ff005a;
+    letter-spacing: 10px;
+    margin: 0;
+}
+.redirection .redirection-registration {
+    position: relative;
+    height: 180px;
+    margin-bottom: 20px;
+    z-index: -1;
+}
+
+#redirection {
+    position: relative;
+    height: 100vh;
+}
+
+#redirection .redirection {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.redirection {
+    max-width: 767px;
+    width: 100%;
+    line-height: 1.4;
+    text-align: center;
+}
+
