@@ -4,23 +4,24 @@
 namespace App\Model;
 
 
-class Registration
+class Registration extends AbstractModel
 {
 
     /**
-     * @Var string
+     * @var integer
      */
-    protected $pseudo;
+    protected $id;
 
     /**
      * @Var string
      */
-    protected $email;
+    protected $username;
 
     /**
      * @Var string
      */
-    protected $confEmail;
+    protected $mail;
+
 
     /**
      * @Var string
@@ -28,64 +29,68 @@ class Registration
     protected $password;
 
     /**
-     * @Var string
+     * @Var \DateTime
      */
-    protected $confPassword;
+    protected $registrationDate;
+
+
+public function __construct(array $data = [])
+{
+    $this->registrationDate =  new \DateTime();
+    parent::__construct($data);
+}
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getPseudo()
+    public function getId(): int
     {
-        return $this -> pseudo;
+        return $this->id;
     }
 
     /**
-     * @param mixed $pseudo
+     * @param int $id
      * @return Registration
      */
-    public function setPseudo($pseudo)
+    public function setId(int $id): Registration
     {
-        $this -> pseudo = $pseudo;
-
+        $this->id = $id;
         return $this;
     }
 
     /**
      * @return mixed
      */
-    public function getEmail()
+    public function getUsername()
     {
-        return $this -> email;
+        return $this->username;
     }
 
     /**
-     * @param mixed $email
+     * @param mixed $username
      * @return Registration
      */
-    public function setEmail($email)
+    public function setUsername($username)
     {
-        $this -> email = $email;
-
+        $this->username = $username;
         return $this;
     }
 
     /**
      * @return mixed
      */
-    public function getConfEmail()
+    public function getMail()
     {
-        return $this -> confEmail;
+        return $this->mail;
     }
 
     /**
-     * @param mixed $confEmail
+     * @param mixed $mail
      * @return Registration
      */
-    public function setConfEmail($confEmail)
+    public function setMail($mail)
     {
-        $this -> confEmail = $confEmail;
-
+        $this->mail = $mail;
         return $this;
     }
 
@@ -94,7 +99,7 @@ class Registration
      */
     public function getPassword()
     {
-        return $this -> password;
+        return $this->password;
     }
 
     /**
@@ -103,27 +108,28 @@ class Registration
      */
     public function setPassword($password)
     {
-        $this -> password = $password;
-
+        $this->password = $password;
         return $this;
     }
 
     /**
-     * @return mixed
+     * @return \DateTime
      */
-    public function getConfPassword()
+    public function getRegistrationDate(): \DateTime
     {
-        return $this -> confPassword;
+        return $this->registrationDate;
     }
 
     /**
-     * @param mixed $confPassword
+     * @param \DateTime $registrationDate
      * @return Registration
      */
-    public function setConfPassword($confPassword)
+    public function setRegistrationDate(\DateTime $registrationDate): Registration
     {
-        $this -> confPassword = $confPassword;
-
+        $this->registrationDate = $registrationDate;
         return $this;
     }
+
+
+
 }

@@ -30,6 +30,18 @@ registration:
 
 resume:
   path: /resume/
-  controller: ResumeController::resumeAction
+  controller: ResumeController::resume
+  methods: [GET,POST]
+  requirements:
+
+profil:
+  path: /profil/
+  controller: ProfilController::profil
+  methods: [GET,POST]
+  requirements:
+
+connect:
+  path: /connection/
+  controller: ConnectController::connect
   methods: [GET,POST]
   requirements:
