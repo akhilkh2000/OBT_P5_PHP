@@ -4,11 +4,13 @@
 namespace App\Model;
 
 
+use DateTime;
+
 class Registration extends AbstractModel
 {
 
     /**
-     * @var integer
+     * @var int
      */
     protected $id;
 
@@ -33,13 +35,6 @@ class Registration extends AbstractModel
      */
     protected $registrationDate;
 
-
-public function __construct(array $data = [])
-{
-    $this->registrationDate =  new \DateTime();
-    parent::__construct($data);
-}
-
     /**
      * @return int
      */
@@ -48,11 +43,17 @@ public function __construct(array $data = [])
         return $this->id;
     }
 
+    public function __construct(array $datas = [])
+    {
+        $this->registrationDate = new DateTime();
+        parent::__construct($datas);
+    }
+
     /**
      * @param int $id
      * @return Registration
      */
-    public function setId(int $id): Registration
+    public function setId(int $id)
     {
         $this->id = $id;
         return $this;
@@ -70,16 +71,17 @@ public function __construct(array $data = [])
      * @param mixed $username
      * @return Registration
      */
-    public function setUsername($username)
+    public function setUsername($username):Registration
     {
         $this->username = $username;
+
         return $this;
     }
 
     /**
      * @return mixed
      */
-    public function getMail()
+    public function getMail(): string
     {
         return $this->mail;
     }
@@ -88,7 +90,7 @@ public function __construct(array $data = [])
      * @param mixed $mail
      * @return Registration
      */
-    public function setMail($mail)
+    public function setMail($mail): Registration
     {
         $this->mail = $mail;
         return $this;
@@ -97,7 +99,7 @@ public function __construct(array $data = [])
     /**
      * @return mixed
      */
-    public function getPassword()
+    public function getPassword(): string
     {
         return $this->password;
     }
@@ -106,30 +108,28 @@ public function __construct(array $data = [])
      * @param mixed $password
      * @return Registration
      */
-    public function setPassword($password)
+    public function setPassword($password): Registration
     {
         $this->password = $password;
         return $this;
     }
 
     /**
-     * @return \DateTime
+     * @return mixed
      */
-    public function getRegistrationDate(): \DateTime
+    public function getRegistrationDate():\DateTime
     {
         return $this->registrationDate;
     }
 
     /**
-     * @param \DateTime $registrationDate
+     * @param mixed $registrationDate
      * @return Registration
      */
-    public function setRegistrationDate(\DateTime $registrationDate): Registration
+    public function setRegistrationDate(\DateTime $registrationDate):Registration
     {
         $this->registrationDate = $registrationDate;
         return $this;
     }
-
-
 
 }

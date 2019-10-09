@@ -374,7 +374,7 @@ font-weight: normal;}
   position: absolute;
 }*/
 
-}
+
 .image-overlay {
   position: absolute;
   z-index: 5;
@@ -437,10 +437,10 @@ font-weight: normal;}
   color: #fff;
   font-weight: bold;
   font-size: 13px;
-  font-family:'Open Sans', sans-serif
+  font-family:'Open Sans', sans-serif;
   line-height: 1;
-  *display:inline;
-  *zoom:1;
+  display:inline;
+  zoom:1;
   position: relative;
   text-transform: uppercase;
   -webkit-transition: all 0.3s;
@@ -510,6 +510,11 @@ font-weight: normal;}
 .label-purple[href]:hover,
 .label-purple[href]:focus {
   background-color: #800080;
+}
+.alert-danger{
+  margin: 20px 30px 0 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 .label-purple {
   background-color: #800080;

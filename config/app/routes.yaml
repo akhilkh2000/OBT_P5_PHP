@@ -4,44 +4,44 @@ homepage:
   methods: [GET,POST]
 
 notFound:
-  path: /404/
+  path: /404
   controller: NotFoundController::notFound
   methods: [GET,POST]
 
 blog:
-  path: /blog/
+  path: /blog
   controller: BlogController::blog
   methods: [GET,POST]
 
 portfolio:
-  path: /portfolio/
+  path: /portfolio
   controller: PortFolioController::portFolio
   methods: [GET,POST]
 
 contact:
-  path: /contact/
+  path: /contact
   controller: ContactController::contact
   methods: [GET,POST]
 
 registration:
-  path: /registration/
+  path: /registration
   controller: RegistController::registAction
   methods: [GET,POST]
 
 resume:
-  path: /resume/
+  path: /resume
   controller: ResumeController::resume
   methods: [GET,POST]
   requirements:
 
 profil:
-  path: /profil/
+  path: /profil
   controller: ProfilController::profil
   methods: [GET,POST]
   requirements:
 
 connect:
-  path: /connection/
+  path: /connection
   controller: ConnectController::connect
   methods: [GET,POST]
   requirements:

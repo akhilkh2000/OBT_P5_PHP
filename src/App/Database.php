@@ -13,16 +13,17 @@ class Database extends PDO
         'integer' => parent::PARAM_INT,
         'boolean' => parent::PARAM_BOOL
     ];
+
     /**
      * Connection constructor.
      * @param string $dsn
      * @param string $username
-     * @param string $passwd
+     * @param string $password
      * @param array $options
      */
-    public function __construct($dsn, $username = '', $passwd = '', $options = [])
+    public function __construct($dsn, $username = '', $password = '', $options = [])
     {
-        parent::__construct($dsn, $username, $passwd, $options);
+        parent::__construct($dsn, $username, $password, $options);
         parent::setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         parent::setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         parent::setAttribute(PDO::ATTR_EMULATE_PREPARES, false);

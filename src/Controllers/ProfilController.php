@@ -10,8 +10,7 @@ class ProfilController extends AbstractController
     public function Profil()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-//            $resistData = $this->getGlobalPHP('POST');
-            dump ($_POST);
+            $resistData = $this->getGlobalPHP('POST');
             return $this->renderResponse ("core/profilUpdate.html.twig");
         }
 
