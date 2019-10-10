@@ -53,7 +53,7 @@ class ValidatorMessage extends AbstractController
         $this -> error[$field][] = sprintf ($this -> messages[$rule], $field, $option);
     }
 
-
+    /** Public method */
     /**
      * Validator constructor.
      * @param $params
@@ -67,6 +67,7 @@ class ValidatorMessage extends AbstractController
     /**
      * @param string $field
      * @param int $min
+     * @return ValidatorMessage
      */
     private function lenghMin(string $field, int $min = 6)
     {
@@ -75,11 +76,13 @@ class ValidatorMessage extends AbstractController
                 $this -> addError ('lenghMin', $field, $min);
             }
         }
+        return $this;
     }
 
     /**
      * @param string $field
      * @param int $max
+     * @return ValidatorMessage
      */
     private function lenghMax(string $field, int $max = 20)
     {
@@ -88,6 +91,7 @@ class ValidatorMessage extends AbstractController
                 $this -> addError ('lenghMax', $field, $max);
             }
         }
+        return $this;
     }
 
 
@@ -137,7 +141,6 @@ class ValidatorMessage extends AbstractController
     public function getError()
     {
         return $this -> error;
-
     }
 
 }

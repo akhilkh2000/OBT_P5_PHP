@@ -1,0 +1,26 @@
+{% extends 'core/layout.html.twig' %}
+{% block body %}
+
+<link href="../css/connexion.css" rel="stylesheet" >
+<link href="../css/main.css" rel="stylesheet" id="bootstrap-css">
+<script src="../js/bootstrap.min.js"></script>
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <div class="fadeIn first">
+      <img src="../images/icon.png" id="icon" alt="User Icon" />
+    </div>
+    <form>
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+      <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+      <input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+    <div id="formFooter">
+      <a class="underlineHover" href="#">mot de passe oublié ?</a>
+      <div>
+      <a class="underlineHover" href="/">Home...</a>
+    </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

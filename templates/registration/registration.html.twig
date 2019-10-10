@@ -1,0 +1,69 @@
+
+{% extends 'core/layout.html.twig' %}
+
+
+{% block body %}
+
+<body >
+<link rel="stylesheet" href="/css/main.css">
+<link rel='stylesheet' href='/css/formular.css'>
+<link rel='stylesheet' href='/css/jquery-ui.css'>
+<link rel='stylesheet' href='/css/bootstrap.min.css'>
+<h1 class = "obt"> Formulaire d'inscription </h1>
+<div class = "content-obt">
+    <div class = "form_obt">
+        <form method = "post" action = "/registration" class = "agile_form">
+            <div class = "agileits-left">
+                <div id = "bloc">
+                        {% for error in errors['username']%}
+                        <div class="alert alert-danger">
+                            {{ error }}
+                        </div>
+                        {% endfor %}
+                    <label for = "pseudo"> Pseudo * </label>
+                    <input type = "text" name = "username" id = "username" value = "{{ username }}" size = "30" requis/>
+                        {% for error in errors['E-mail']%}
+                        <div class="alert alert-danger"size = "30">
+                            {{ error }}
+                        </div>
+                        {% endfor %}
+
+                    <label for = "mail"> E-mail * </label>
+                    <input type = "email" name = "mail" id = "mail" value = "{{ mail }}" size = "30" requis/>
+                    {% for error in errors['E-mails']%}
+                        <div class="alert alert-danger" size = "30">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                    <label for = "confirm_mail"> E-mail de confirmation * </label>
+                    <input type = "email" name = "conf_mail" id = "confirm_mail" value = "{{ confmail }}" size = "30" requis/>
+
+                    <label for = "mdp"> Mot de passe * </label>
+                    <input type = "password" name = "password" id = "password" size = "30" requis/>
+                    {% for error in errors['password']%}
+                        <div class="alert alert-danger">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                    <label for = "confirm_mdp"> Confirmer le mot de passe * </label>
+                    <input type = "password" name = "conf_mdp" id = "confirm_mdp" size = "30" requis/>
+                    <br>
+                </div>
+
+                <div class = "submit-ob">
+                    <input type = "submit" value = "S'inscrire">
+                </div>
+                <div class = "submit-ob">
+                    <input type = "submit" value = "Annuler">
+                </div>
+            </div>
+        </form>
+            <div class = "clear">
+                <h2 class = "copyright-agileits"> © 2018 OBT-Development Registration. Tous droits réservés | Concu par
+                    <a href="https://www.obt-development.eu" target="_blank"> Olivier Boutet </a>
+                </h2>
+            </div>
+    </div>
+</div>
+</body>
+{% endblock %}

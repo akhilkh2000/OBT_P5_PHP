@@ -2,4 +2,5 @@ vendor/
 .idea/
 public/fonts/
 config/app/database.php
+config/app/mailer.php
 
